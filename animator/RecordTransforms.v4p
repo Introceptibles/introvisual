@@ -1,10 +1,10 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0">
-   <BOUNDS type="Window" left="6225" top="930" width="15240" height="16455">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\introvisual\animator\RecordTransforms.v4p" systemname="RecordTransforms" filename="C:\vvvv\projects\meegi\subpatches\animator\RecordTransforms.v4p" scrollx="15" scrolly="0">
+   <BOUNDS type="Window" left="1770" top="1050" width="15240" height="16455">
    </BOUNDS>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="1">
    <BOUNDS type="Node" left="720" top="270" width="100" height="100">
@@ -98,18 +98,6 @@
    </NODE>
    <LINK srcnodeid="6" srcpinname="Output Node" dstnodeid="11" dstpinname="Touch Data">
    </LINK>
-   <NODE systemname="BlobState (PatternTouch Join)" filename="..\..\..\..\contributions\PatternTouch\nodes\plugins\PatternTouch.dll" nodename="BlobState (PatternTouch Join)" componentmode="Hidden" id="17">
-   <BOUNDS type="Node" left="8355" top="2340" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="ID" visible="1">
-   </PIN>
-   <PIN pinname="PositionXY" visible="1">
-   </PIN>
-   <PIN pinname="Hit ID" visible="1">
-   </PIN>
-   <PIN pinname="Blob" visible="1">
-   </PIN>
-   </NODE>
    <NODE systemname="IOBox (Node)" nodename="IOBox (Node)" componentmode="InABox" id="20">
    <BOUNDS type="Node" left="6645" top="270" width="100" height="100">
    </BOUNDS>
@@ -132,80 +120,6 @@
    </NODE>
    <LINK srcnodeid="20" srcpinname="Output Node" dstnodeid="21" dstpinname="Transform In">
    </LINK>
-   <LINK srcnodeid="21" srcpinname="Object Hit" dstnodeid="17" dstpinname="Hit ID" linkstyle="VHV">
-   <LINKPOINT x="7255" y="2148">
-   </LINKPOINT>
-   <LINKPOINT x="9095" y="2158">
-   </LINKPOINT>
-   </LINK>
-   <NODE systemname="Rotate (PatternTouch 2D)" filename="..\..\..\..\contributions\PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Rotate (PatternTouch 2D)" componentmode="Hidden" id="22">
-   <BOUNDS type="Node" left="4920" top="3960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Blobs" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ration" visible="1" slicecount="1" values="||">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="ID" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Rotation" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="4920" top="3960">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Translate (PatternTouch 2D)" filename="..\..\..\..\contributions\PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Translate (PatternTouch 2D)" componentmode="Hidden" id="23">
-   <BOUNDS type="Node" left="6585" top="3960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Blobs" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ration" visible="1">
-   </PIN>
-   <PIN pinname="TranslateXY" visible="1">
-   </PIN>
-   <PIN pinname="ID" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <BOUNDS type="Box" left="6585" top="3960">
-   </BOUNDS>
-   </NODE>
-   <NODE systemname="Scale (PatternTouch 2D)" filename="..\..\..\..\contributions\PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Scale (PatternTouch 2D)" componentmode="Hidden" id="24">
-   <BOUNDS type="Node" left="8250" top="3960" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Blobs" visible="1">
-   </PIN>
-   <PIN pinname="Aspect Ration" visible="1">
-   </PIN>
-   <PIN pinname="Reset" visible="1">
-   </PIN>
-   <PIN pinname="Scale" visible="1">
-   </PIN>
-   <PIN pinname="Initial Value" slicecount="1" values="1">
-   </PIN>
-   <PIN pinname="ID" slicecount="1" values="1">
-   </PIN>
-   <BOUNDS type="Box" left="8250" top="3960">
-   </BOUNDS>
-   </NODE>
-   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="22" dstpinname="Blobs" linkstyle="Bezier">
-   <LINKPOINT x="8355" y="3270">
-   </LINKPOINT>
-   <LINKPOINT x="5505" y="3270">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="23" dstpinname="Blobs" linkstyle="Bezier">
-   <LINKPOINT x="8340" y="3278">
-   </LINKPOINT>
-   <LINKPOINT x="7170" y="3278">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="24" dstpinname="Blobs" linkstyle="Bezier">
-   <LINKPOINT x="8385" y="3285">
-   </LINKPOINT>
-   <LINKPOINT x="8790" y="3285">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="25">
    <BOUNDS type="Node" left="5805" top="2370" width="100" height="100">
    </BOUNDS>
@@ -214,24 +128,6 @@
    <PIN pinname="Input Value" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="24" dstpinname="Aspect Ration" linkstyle="VHV">
-   <LINKPOINT x="5865" y="3285">
-   </LINKPOINT>
-   <LINKPOINT x="8415" y="3285">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="23" dstpinname="Aspect Ration" linkstyle="VHV">
-   <LINKPOINT x="5865" y="3278">
-   </LINKPOINT>
-   <LINKPOINT x="6750" y="3278">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="22" dstpinname="Aspect Ration" linkstyle="VHV">
-   <LINKPOINT x="5805" y="3300">
-   </LINKPOINT>
-   <LINKPOINT x="5130" y="3300">
-   </LINKPOINT>
-   </LINK>
    <NODE systemname="Add (Value)" nodename="Add (Value)" componentmode="Hidden" id="35">
    <BOUNDS type="Node" left="5940" top="5850" width="100" height="100">
    </BOUNDS>
@@ -280,24 +176,6 @@
    <PIN pinname="Y Input Value" slicecount="1" values="0">
    </PIN>
    </NODE>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="13530" y="3375">
-   </LINKPOINT>
-   <LINKPOINT x="9000" y="3375">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="13530" y="3360">
-   </LINKPOINT>
-   <LINKPOINT x="7335" y="3360">
-   </LINKPOINT>
-   </LINK>
-   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
-   <LINKPOINT x="13530" y="3375">
-   </LINKPOINT>
-   <LINKPOINT x="5670" y="3375">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="37" dstpinname="Initialize" linkstyle="Bezier" hiddenwhenlocked="1">
    <LINKPOINT x="13530" y="4673">
    </LINKPOINT>
@@ -406,7 +284,7 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <NODE systemname="Counter (Animation)" nodename="Counter (Animation)" componentmode="Hidden" id="54">
+   <NODE systemname="Counter (Animation Legacy)" nodename="Counter (Animation)" componentmode="Hidden" id="54">
    <BOUNDS type="Node" left="705" top="7140" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Maximum" visible="1">
@@ -612,14 +490,6 @@
    <PIN pinname="String Type" slicecount="1" values="MultiLine">
    </PIN>
    </NODE>
-   <LINK srcnodeid="11" srcpinname="Id" dstnodeid="17" dstpinname="ID">
-   </LINK>
-   <LINK srcnodeid="11" srcpinname="PositionXY" dstnodeid="17" dstpinname="PositionXY" linkstyle="Bezier">
-   <LINKPOINT x="9120" y="1695">
-   </LINKPOINT>
-   <LINKPOINT x="8400" y="1695">
-   </LINKPOINT>
-   </LINK>
    <LINK srcnodeid="11" srcpinname="PositionXY" dstnodeid="21" dstpinname="PointsXY" linkstyle="VHV">
    <LINKPOINT x="9120" y="1373">
    </LINKPOINT>
@@ -681,7 +551,7 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1" slicecount="1" values="0">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -692,8 +562,6 @@
    <LINKPOINT x="5250" y="2700">
    </LINKPOINT>
    </LINK>
-   <LINK srcnodeid="22" srcpinname="Rotation" dstnodeid="72" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="72" srcpinname="Output" dstnodeid="38" dstpinname="Rotate" linkstyle="Bezier">
    <LINKPOINT x="4965" y="6600">
    </LINKPOINT>
@@ -703,15 +571,13 @@
    <NODE systemname="S+H (Animation)" nodename="S+H (Animation)" componentmode="Hidden" id="73">
    <BOUNDS type="Node" left="8265" top="4560" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Set" visible="1">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
    </NODE>
-   <LINK srcnodeid="24" srcpinname="Scale" dstnodeid="73" dstpinname="Input">
-   </LINK>
    <LINK srcnodeid="4" srcpinname="Y Output Value" dstnodeid="73" dstpinname="Set" linkstyle="VHV">
    <LINKPOINT x="1815" y="4350">
    </LINKPOINT>
@@ -729,7 +595,7 @@
    </BOUNDS>
    <PIN pinname="Set" visible="1">
    </PIN>
-   <PIN pinname="Input" visible="1">
+   <PIN pinname="Input" visible="1" slicecount="1" values="0">
    </PIN>
    <PIN pinname="Output" visible="1">
    </PIN>
@@ -740,8 +606,142 @@
    <LINKPOINT x="6960" y="4485">
    </LINKPOINT>
    </LINK>
+   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="32" dstpinname="PositionXY">
+   </LINK>
+   <NODE systemname="BlobState (PatternTouch Join)" filename="PatternTouch\nodes\plugins\PatternTouch.dll" nodename="BlobState (PatternTouch Join)" componentmode="Hidden" id="17">
+   <BOUNDS type="Node" left="8355" top="2340" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="ID" visible="1">
+   </PIN>
+   <PIN pinname="PositionXY" visible="1">
+   </PIN>
+   <PIN pinname="Hit ID" visible="1">
+   </PIN>
+   <PIN pinname="Blob" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="21" srcpinname="Object Hit" dstnodeid="17" dstpinname="Hit ID" linkstyle="VHV">
+   <LINKPOINT x="7255" y="2148">
+   </LINKPOINT>
+   <LINKPOINT x="9095" y="2158">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="Id" dstnodeid="17" dstpinname="ID">
+   </LINK>
+   <LINK srcnodeid="11" srcpinname="PositionXY" dstnodeid="17" dstpinname="PositionXY" linkstyle="Bezier">
+   <LINKPOINT x="9120" y="1695">
+   </LINKPOINT>
+   <LINKPOINT x="8400" y="1695">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Rotate (PatternTouch 2D)" filename="PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Rotate (PatternTouch 2D)" componentmode="Hidden" id="22">
+   <BOUNDS type="Node" left="4920" top="3960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Blobs" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ration" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="ID" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Rotation" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="4920" top="3960">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="22" dstpinname="Aspect Ration" linkstyle="VHV">
+   <LINKPOINT x="5805" y="3300">
+   </LINKPOINT>
+   <LINKPOINT x="5130" y="3300">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="22" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3375">
+   </LINKPOINT>
+   <LINKPOINT x="5670" y="3375">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="22" srcpinname="Rotation" dstnodeid="72" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="22" dstpinname="Blobs" linkstyle="Bezier">
+   <LINKPOINT x="8355" y="3270">
+   </LINKPOINT>
+   <LINKPOINT x="5505" y="3270">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Translate (PatternTouch 2D)" filename="PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Translate (PatternTouch 2D)" componentmode="Hidden" id="23">
+   <BOUNDS type="Node" left="6585" top="3960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Blobs" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ration" visible="1">
+   </PIN>
+   <PIN pinname="TranslateXY" visible="1">
+   </PIN>
+   <PIN pinname="ID" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <BOUNDS type="Box" left="6585" top="3960">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="23" dstpinname="Aspect Ration" linkstyle="VHV">
+   <LINKPOINT x="5865" y="3278">
+   </LINKPOINT>
+   <LINKPOINT x="6750" y="3278">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="23" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3360">
+   </LINKPOINT>
+   <LINKPOINT x="7335" y="3360">
+   </LINKPOINT>
+   </LINK>
    <LINK srcnodeid="23" srcpinname="TranslateXY" dstnodeid="74" dstpinname="Input">
    </LINK>
-   <LINK srcnodeid="74" srcpinname="Output" dstnodeid="32" dstpinname="PositionXY">
+   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="23" dstpinname="Blobs" linkstyle="Bezier">
+   <LINKPOINT x="8340" y="3278">
+   </LINKPOINT>
+   <LINKPOINT x="7170" y="3278">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Scale (PatternTouch 2D)" filename="PatternTouch\nodes\plugins\PatternTouch.dll" nodename="Scale (PatternTouch 2D)" componentmode="Hidden" id="24">
+   <BOUNDS type="Node" left="8250" top="3960" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Blobs" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Ration" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1">
+   </PIN>
+   <PIN pinname="Scale" visible="1">
+   </PIN>
+   <PIN pinname="Initial Value" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="ID" slicecount="1" values="1">
+   </PIN>
+   <BOUNDS type="Box" left="8250" top="3960">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="25" srcpinname="Input Value" dstnodeid="24" dstpinname="Aspect Ration" linkstyle="VHV">
+   <LINKPOINT x="5865" y="3285">
+   </LINKPOINT>
+   <LINKPOINT x="8415" y="3285">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="42" srcpinname="Y Output Value" dstnodeid="24" dstpinname="Reset" linkstyle="Bezier" hiddenwhenlocked="1">
+   <LINKPOINT x="13530" y="3375">
+   </LINKPOINT>
+   <LINKPOINT x="9000" y="3375">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="24" srcpinname="Scale" dstnodeid="73" dstpinname="Input">
+   </LINK>
+   <LINK srcnodeid="17" srcpinname="Blob" dstnodeid="24" dstpinname="Blobs" linkstyle="Bezier">
+   <LINKPOINT x="8385" y="3285">
+   </LINKPOINT>
+   <LINKPOINT x="8790" y="3285">
+   </LINKPOINT>
    </LINK>
    </PATCH>
