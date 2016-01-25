@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\_gui\Canvas.v4p" systemname="Canvas" filename="C:\vvvv\projects\meegi\_gui\Canvas.v4p" scrollx="0" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\introvisual\_gui\Canvas.v4p" systemname="Canvas" filename="C:\vvvv\projects\meegi\_gui\Canvas.v4p" scrollx="0" scrolly="0">
    <BOUNDS type="Window" left="13050" top="7440" width="14280" height="9180">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="0">
    <BOUNDS type="Node" left="765" top="1545" width="100" height="100">
@@ -535,6 +535,8 @@
    </PIN>
    <PIN pinname="SizeXY" visible="1">
    </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
+   </PIN>
    </NODE>
    <LINK srcnodeid="48" srcpinname="Texture Out" dstnodeid="45" dstpinname="Texture">
    </LINK>
@@ -642,6 +644,8 @@
    <PIN pinname="Filename" slicecount="1" values="..\assets\ButtonPaperBackground.png">
    </PIN>
    <PIN pinname="SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="57" srcpinname="Texture Out" dstnodeid="60" dstpinname="Texture">

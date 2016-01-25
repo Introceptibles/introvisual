@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\_gui.v4p" systemname="_ui" filename="C:\vvvv\projects\meegi\_ui.v4p" scrollx="0" scrolly="1080">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\introvisual\_gui.v4p" systemname="_ui" filename="C:\vvvv\projects\meegi\_ui.v4p" scrollx="0" scrolly="1080">
    <BOUNDS type="Window" left="2940" top="4815" width="7980" height="9240">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="0" border="1">
    <BOUNDS type="Node" left="525" top="7785" width="100" height="100">
@@ -171,11 +171,11 @@
    </BOUNDS>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <BOUNDS type="Window" left="29220" top="5625" width="17115" height="14940">
+   <BOUNDS type="Window" left="7005" top="3810" width="17115" height="14940">
    </BOUNDS>
    <PIN pinname="Anchor Points XY" visible="1" slicecount="2" values="0,0.25">
    </PIN>
-   <PIN pinname="Touch Data" visible="1">
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Anchor Points" visible="1">
    </PIN>
@@ -228,14 +228,6 @@
    </LINK>
    <PACK Name="image" Version="0.2.0">
    </PACK>
-   <NODE systemname="InputDevice" filename="subpatches\animator\InputDevice.v4p" nodename="subpatches\animator\InputDevice.v4p" componentmode="Hidden" id="86">
-   <BOUNDS type="Node" left="1665" top="2325" width="100" height="100">
-   </BOUNDS>
-   <PIN pinname="Touch Data" visible="1">
-   </PIN>
-   <PIN pinname="Emulate Touch" visible="1">
-   </PIN>
-   </NODE>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90" systemname="IOBox (Value Advanced)">
    <BOUNDS type="Box" left="1650" top="1635" width="480" height="480">
    </BOUNDS>
@@ -256,10 +248,6 @@
    <PIN pinname="Descriptive Name" slicecount="1" values="|Emulate Touch|">
    </PIN>
    </NODE>
-   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Emulate Touch">
-   </LINK>
-   <LINK srcnodeid="86" srcpinname="Touch Data" dstnodeid="64" dstpinname="Touch Data">
-   </LINK>
    <LINK srcnodeid="65" srcpinname="AnchorPoints" dstnodeid="64" dstpinname="Anchor Points">
    </LINK>
    <NODE nodename="S (Node)" id="94" systemname="S (Node)">
@@ -280,6 +268,8 @@
    <PIN pinname="Filename" slicecount="1" values="assets\Corkboard-Texture-02.jpg">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   <PIN pinname="Reload" slicecount="1" values="0">
    </PIN>
    </NODE>
    <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="69" dstpinname="Texture">
@@ -403,5 +393,19 @@
    <LINK srcnodeid="105" srcpinname="Output" dstnodeid="64" dstpinname="Reset">
    </LINK>
    <LINK srcnodeid="104" srcpinname="R" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   <NODE systemname="InputDevice" filename="_gui\InputDevice.v4p" nodename="_gui\InputDevice.v4p" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="1665" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <PIN pinname="Emulate Touch" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="11085" top="4515" width="11805" height="11175">
+   </BOUNDS>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Emulate Touch">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Touch Data" dstnodeid="64" dstpinname="Touch Data">
    </LINK>
    </PATCH>

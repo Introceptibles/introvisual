@@ -1,5 +1,5 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\_gui\ItemMenu.v4p" scrollx="690" scrolly="0">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\introvisual\_gui\ItemMenu.v4p" scrollx="690" scrolly="0">
    <NODE id="11" systemname="IOBox (Node)" componentmode="InABox">
    <PIN pinname="Descriptive Name" slicecount="1" values="Layer">
    </PIN>
@@ -10,9 +10,9 @@
    <PIN pinname="Input Node" visible="1" slicecount="1" values="||">
    </PIN>
    </NODE>
-   <BOUNDS type="Window" left="29220" top="5625" width="17115" height="14940">
+   <BOUNDS type="Window" left="7005" top="3810" width="17115" height="14940">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <PACK Name="image" Version="0.2.0">
    </PACK>
@@ -191,7 +191,7 @@
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
-   <PIN pinname="Touch Data" visible="1">
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Reset" visible="1">
    </PIN>
@@ -303,7 +303,7 @@
    </BOUNDS>
    <BOUNDS type="Window" left="10905" top="7845" width="14730" height="9315">
    </BOUNDS>
-   <PIN pinname="Touch Data" visible="1">
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Menu Transform" visible="1">
    </PIN>
@@ -441,7 +441,7 @@
    </PIN>
    <PIN pinname="Color" visible="1">
    </PIN>
-   <PIN pinname="Touch Data" visible="1">
+   <PIN pinname="Touch Data" visible="1" slicecount="1" values="||">
    </PIN>
    <PIN pinname="Layer" visible="1">
    </PIN>
