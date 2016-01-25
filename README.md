@@ -1,3 +1,5 @@
 # Introvisual
 
-Repository containing dynamic visualizations for different physiological signals and high-level constructs. It also contains tool to create your simple drawings which can be animated with a touch interface.
+Repository containing dynamic visualizations for different physiological signals and high-level constructs.
+
+It also contains a simple multitouch GUI example for toggling visualization on and off on a avatar, options that are sent through OSC to another application in charge of rendering the actual dynamic visualizations.
