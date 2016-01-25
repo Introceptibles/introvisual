@@ -1,0 +1,407 @@
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
+   <PATCH nodename="C:\vvvv\projects\meegi\_gui.v4p" systemname="_ui" filename="C:\vvvv\projects\meegi\_ui.v4p" scrollx="0" scrolly="1080">
+   <BOUNDS type="Window" left="2940" top="4815" width="7980" height="9240">
+   </BOUNDS>
+   <PACK Name="addonpack" Version="33.7.0">
+   </PACK>
+   <NODE systemname="Renderer (DX11)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11)" componentmode="InAWindow" id="0" border="1">
+   <BOUNDS type="Node" left="525" top="7785" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="525" top="7785" width="6000" height="4500">
+   </BOUNDS>
+   <BOUNDS type="Window" left="17415" top="810" width="9420" height="6765">
+   </BOUNDS>
+   <PIN pinname="Show Cursor" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="Aspect Ratio" visible="1">
+   </PIN>
+   <PIN pinname="Actual BackBuffer SizeXY" visible="1">
+   </PIN>
+   <PIN pinname="Layers" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Background Color" slicecount="1" values="|0.40033,0.40033,0.40033,1.00000|">
+   </PIN>
+   <PIN pinname="Mouse State" visible="1">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="GUI">
+   </PIN>
+   <PIN pinname="Keyboard State" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="AspectRatio (Transform)" nodename="AspectRatio (Transform)" componentmode="Hidden" id="3">
+   <BOUNDS type="Node" left="3630" top="8790" width="2025" height="270">
+   </BOUNDS>
+   <PIN pinname="Transform Out" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Width" visible="1">
+   </PIN>
+   <PIN pinname="Aspect Height" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="0" dstpinname="Aspect Ratio" linkstyle="Bezier">
+   <LINKPOINT x="3120" y="9225">
+   </LINKPOINT>
+   <LINKPOINT x="2730" y="7155">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Vector (2d Split)" nodename="Vector (2d Split)" componentmode="Hidden" id="4">
+   <BOUNDS type="Node" left="4110" top="8325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="XY" visible="1">
+   </PIN>
+   <PIN pinname="X" visible="1">
+   </PIN>
+   <PIN pinname="Y" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Actual BackBuffer SizeXY" dstnodeid="4" dstpinname="XY" linkstyle="VHV">
+   <LINKPOINT x="1575" y="8175">
+   </LINKPOINT>
+   <LINKPOINT x="4110" y="8175">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="X" dstnodeid="3" dstpinname="Aspect Width">
+   </LINK>
+   <LINK srcnodeid="4" srcpinname="Y" dstnodeid="3" dstpinname="Aspect Height">
+   </LINK>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="6">
+   <BOUNDS type="Node" left="135" top="120" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="frames per second" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="7" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="135" top="555" width="1215" height="405">
+   </BOUNDS>
+   <BOUNDS type="Node" left="135" top="555" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="fps">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Size" slicecount="1" values="16">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="6" srcpinname="frames per second" dstnodeid="7" dstpinname="Y Input Value">
+   </LINK>
+   <NODE systemname="Group (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="Group (DX11.Layer)" componentmode="Hidden" id="9">
+   <BOUNDS type="Node" left="570" top="7320" width="3045" height="270">
+   </BOUNDS>
+   <PIN pinname="Input Count" slicecount="1" values="10">
+   </PIN>
+   <PIN pinname="Layer Out" visible="1">
+   </PIN>
+   <PIN pinname="Layer 1" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 2" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 3" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 4" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 5" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 10" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer 6" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="9" srcpinname="Layer Out" dstnodeid="0" dstpinname="Layers">
+   </LINK>
+   <NODE systemname="Canvas" filename="_gui\Canvas.v4p" nodename="_gui\Canvas.v4p" componentmode="Hidden" id="65">
+   <BOUNDS type="Node" left="1091" top="2985" width="1800" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="105" top="1485" width="3430" height="4480">
+   </BOUNDS>
+   <BOUNDS type="Window" left="13050" top="7440" width="14280" height="9180">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Layer Anchor Points" visible="1">
+   </PIN>
+   <PIN pinname="Layer Canvas" visible="1">
+   </PIN>
+   <PIN pinname="Anchor Points XY" visible="1">
+   </PIN>
+   <PIN pinname="AnchorPoints" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="FullscreenQuad (DX11.Layer)" filename="%VVVV%\packs\dx11\nodes\modules\FullscreenQuad (DX11.Layer).v4p" nodename="FullscreenQuad (DX11.Layer)" componentmode="Hidden" id="69">
+   <BOUNDS type="Node" left="855" top="6495" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <PIN pinname="Color" slicecount="1" values="|0.74979,0.74979,0.74979,1.00000|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="69" srcpinname="Layer" dstnodeid="9" dstpinname="Layer 1">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="72" systemname="IOBox (String)">
+   <BOUNDS type="Node" left="120" top="5940" width="975" height="270">
+   </BOUNDS>
+   <BOUNDS type="Box" left="120" top="5940" width="990" height="330">
+   </BOUNDS>
+   <PIN pinname="Input String" visible="0" slicecount="1" values="Background">
+   </PIN>
+   <PIN pinname="Output String" visible="0">
+   </PIN>
+   <PIN pinname="Show Grid" slicecount="1" values="1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="MultiLine">
+   </PIN>
+   </NODE>
+   <NODE nodename="S (Node)" id="81" systemname="S (Node)">
+   <BOUNDS type="Node" left="525" top="8400" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="Mouse">
+   </PIN>
+   <PIN pinname="Input Value" visible="1" slicecount="1" values="||">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Layer Canvas" dstnodeid="9" dstpinname="Layer 2">
+   </LINK>
+   <NODE systemname="ItemMenu" filename="_gui\ItemMenu.v4p" nodename="_gui\ItemMenu.v4p" componentmode="Hidden" id="64">
+   <BOUNDS type="Node" left="1680" top="4095" width="2355" height="270">
+   </BOUNDS>
+   <PIN pinname="Layer" visible="1">
+   </PIN>
+   <BOUNDS type="Window" left="29220" top="5625" width="17115" height="14940">
+   </BOUNDS>
+   <PIN pinname="Anchor Points XY" visible="1" slicecount="2" values="0,0.25">
+   </PIN>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <PIN pinname="Anchor Points" visible="1">
+   </PIN>
+   <PIN pinname="Reset" visible="1" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Item selection" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="65" srcpinname="Anchor Points XY" dstnodeid="64" dstpinname="Anchor Points XY" linkstyle="VHV">
+   <LINKPOINT x="5370" y="2265">
+   </LINKPOINT>
+   <LINKPOINT x="1650" y="2265">
+   </LINKPOINT>
+   </LINK>
+   <LINK srcnodeid="64" srcpinname="Layer" dstnodeid="9" dstpinname="Layer 4">
+   </LINK>
+   <NODE nodename="S (Node)" id="83" systemname="S (Node)">
+   <BOUNDS type="Node" left="1605" top="8400" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|Touch Data|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Touch Data" dstnodeid="83" dstpinname="Input Value" linkstyle="Bezier">
+   <LINKPOINT x="1335" y="8220">
+   </LINKPOINT>
+   <LINKPOINT x="1605" y="8220">
+   </LINKPOINT>
+   </LINK>
+   <NODE systemname="Timing (Debug)" nodename="Timing (Debug)" componentmode="Hidden" id="84">
+   <BOUNDS type="Node" left="5445" top="1320" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="frames per second" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="85" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5460" top="1770" width="795" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5460" top="1770" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="FPS">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="84" srcpinname="frames per second" dstnodeid="85" dstpinname="Y Input Value">
+   </LINK>
+   <PACK Name="image" Version="0.2.0">
+   </PACK>
+   <NODE systemname="InputDevice" filename="subpatches\animator\InputDevice.v4p" nodename="subpatches\animator\InputDevice.v4p" componentmode="Hidden" id="86">
+   <BOUNDS type="Node" left="1665" top="2325" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Touch Data" visible="1">
+   </PIN>
+   <PIN pinname="Emulate Touch" visible="1">
+   </PIN>
+   </NODE>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="90" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="1650" top="1635" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="1650" top="1635" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Emulate Touch|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="90" srcpinname="Y Output Value" dstnodeid="86" dstpinname="Emulate Touch">
+   </LINK>
+   <LINK srcnodeid="86" srcpinname="Touch Data" dstnodeid="64" dstpinname="Touch Data">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="AnchorPoints" dstnodeid="64" dstpinname="Anchor Points">
+   </LINK>
+   <NODE nodename="S (Node)" id="94" systemname="S (Node)">
+   <BOUNDS type="Node" left="3645" top="9195" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|GUI A/R|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="3" srcpinname="Transform Out" dstnodeid="94" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="0" srcpinname="Mouse State" dstnodeid="81" dstpinname="Input Value">
+   </LINK>
+   <LINK srcnodeid="65" srcpinname="Layer Anchor Points" dstnodeid="9" dstpinname="Layer 5">
+   </LINK>
+   <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\DX11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="95">
+   <BOUNDS type="Node" left="1275" top="5880" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Filename" slicecount="1" values="assets\Corkboard-Texture-02.jpg">
+   </PIN>
+   <PIN pinname="Texture Out" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="95" srcpinname="Texture Out" dstnodeid="69" dstpinname="Texture">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="97" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="3960" top="1590" width="480" height="480">
+   </BOUNDS>
+   <BOUNDS type="Node" left="3960" top="1590" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="0">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Press">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="Reset">
+   </PIN>
+   <PIN pinname="X Input Value" slicecount="1" values="0">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="StreamVisuSelectionOSC" filename="_gui\StreamVisuSelectionOSC.v4p" componentmode="Hidden" id="98" nodename="_gui\StreamVisuSelectionOSC.v4p">
+   <BOUNDS type="Node" left="3975" top="5430" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="3975" top="5430" width="4800" height="3600">
+   </BOUNDS>
+   <BOUNDS type="Window" left="12190" top="5110" width="9000" height="9100">
+   </BOUNDS>
+   <PIN pinname="Item Selection" visible="1">
+   </PIN>
+   <PIN pinname="Remote Host" visible="1">
+   </PIN>
+   <PIN pinname="Remote Port" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="64" srcpinname="Item selection" dstnodeid="98" dstpinname="Item Selection">
+   </LINK>
+   <NODE nodename="IOBox (String)" componentmode="InABox" id="99" systemname="IOBox (String)">
+   <BOUNDS type="Box" left="4970" top="4430" width="1380" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="4970" top="4430" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Input String" slicecount="1" visible="1" values="193.50.110.175">
+   </PIN>
+   <PIN pinname="Default" slicecount="1" values="192.168.1.1">
+   </PIN>
+   <PIN pinname="File Mask" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Maximum Characters" slicecount="1" values="-1">
+   </PIN>
+   <PIN pinname="String Type" slicecount="1" values="IP">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Remote Host|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="99" srcpinname="Output String" dstnodeid="98" dstpinname="Remote Host">
+   </LINK>
+   <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="100" systemname="IOBox (Value Advanced)">
+   <BOUNDS type="Box" left="5950" top="4910" width="800" height="240">
+   </BOUNDS>
+   <BOUNDS type="Node" left="5950" top="4910" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Y Input Value" slicecount="1" visible="1" values="9000">
+   </PIN>
+   <PIN pinname="Units" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Precision" slicecount="1" values="4">
+   </PIN>
+   <PIN pinname="Value Type" slicecount="1" values="Integer">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Remote Port|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="100" srcpinname="Y Output Value" dstnodeid="98" dstpinname="Remote Port">
+   </LINK>
+   <NODE nodename="S (Node)" id="101" systemname="S (Node)">
+   <BOUNDS type="Node" left="780" top="9030" width="0" height="0">
+   </BOUNDS>
+   <PIN pinname="Send String" slicecount="1" values="|GUI Keyboard|">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="0" srcpinname="Keyboard State" dstnodeid="101" dstpinname="Input Value">
+   </LINK>
+   <NODE systemname="R (Node)" nodename="R (Node)" componentmode="Hidden" id="103">
+   <BOUNDS type="Node" left="4290" top="2805" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Receive String" slicecount="1" values="|GUI Keyboard|">
+   </PIN>
+   <PIN pinname="Input Value" visible="1">
+   </PIN>
+   </NODE>
+   <NODE systemname="KeyMatch (Keyboard)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="KeyMatch (Keyboard)" componentmode="Hidden" id="104">
+   <BOUNDS type="Node" left="4275" top="3180" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Key Match" slicecount="1" values="r">
+   </PIN>
+   <PIN pinname="Keyboard" visible="1">
+   </PIN>
+   <PIN pinname="R" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="103" srcpinname="Input Value" dstnodeid="104" dstpinname="Keyboard">
+   </LINK>
+   <NODE systemname="OR (Boolean)" nodename="OR (Boolean)" componentmode="Hidden" id="105">
+   <BOUNDS type="Node" left="3975" top="3645" width="100" height="100">
+   </BOUNDS>
+   <PIN pinname="Input 1" visible="1">
+   </PIN>
+   <PIN pinname="Output" visible="1">
+   </PIN>
+   <PIN pinname="Input 2" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="97" srcpinname="Y Output Value" dstnodeid="105" dstpinname="Input 1">
+   </LINK>
+   <LINK srcnodeid="105" srcpinname="Output" dstnodeid="64" dstpinname="Reset">
+   </LINK>
+   <LINK srcnodeid="104" srcpinname="R" dstnodeid="105" dstpinname="Input 2">
+   </LINK>
+   </PATCH>
