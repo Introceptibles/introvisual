@@ -1,8 +1,8 @@
-<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta33.7.dtd" >
-   <PATCH nodename="C:\vvvv\projects\meegi\subpatches\sprites\breathing-meditation.v4p" systemname="breathing-meditation" filename="C:\vvvv\projects\meegi\subpatches\sprites\breathing-meditation.v4p" scrollx="180" scrolly="0">
-   <BOUNDS type="Window" left="29595" top="9300" width="13290" height="12270">
+<!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv45beta34.2.dtd" >
+   <PATCH nodename="C:\vvvv\projects\tobe-demo\introvisual\sprites\breathing-meditation.v4p" systemname="breathing-meditation" filename="C:\vvvv\projects\meegi\subpatches\sprites\breathing-meditation.v4p" scrollx="180" scrolly="0">
+   <BOUNDS type="Window" left="9960" top="4950" width="14175" height="12075">
    </BOUNDS>
-   <PACK Name="addonpack" Version="33.7.0">
+   <PACK Name="addonpack" Version="34.1.0">
    </PACK>
    <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="2">
    <BOUNDS type="Node" left="2175" top="345" width="100" height="100">
@@ -33,7 +33,7 @@
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="4">
    <BOUNDS type="Node" left="1530" top="5985" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\assets\lung-empty.png">
+   <PIN pinname="Filename" slicecount="1" values="..\assets\lung-empty.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -91,7 +91,7 @@
    <NODE systemname="FileTexture (DX11 2d)" filename="%VVVV%\packs\dx11\nodes\plugins\VVVV.DX11.Nodes.dll" nodename="FileTexture (DX11 2d)" componentmode="Hidden" id="15">
    <BOUNDS type="Node" left="630" top="3510" width="100" height="100">
    </BOUNDS>
-   <PIN pinname="Filename" slicecount="1" values="..\..\assets\lung-empty-mask.png">
+   <PIN pinname="Filename" slicecount="1" values="..\assets\lung-empty-mask.png">
    </PIN>
    <PIN pinname="Texture Out" visible="1">
    </PIN>
@@ -305,7 +305,7 @@
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
-   <PIN pinname="ScaleX" slicecount="1" values="1.45" visible="1">
+   <PIN pinname="ScaleX" slicecount="1" visible="1" values="1.45">
    </PIN>
    <PIN pinname="ScaleY" slicecount="1" values="0.06">
    </PIN>
@@ -328,6 +328,8 @@
    <PIN pinname="Color" visible="1" slicecount="1" values="|1.00000,1.00000,1.00000,1.00000|">
    </PIN>
    <PIN pinname="Texture" visible="1" slicecount="1" values="||">
+   </PIN>
+   <PIN pinname="Enabled" slicecount="1" values="0" visible="1">
    </PIN>
    </NODE>
    <LINK srcnodeid="47" srcpinname="Layer" dstnodeid="7" dstpinname="Layer 2">
@@ -379,5 +381,25 @@
    </PIN>
    </NODE>
    <LINK srcnodeid="50" srcpinname="Color Output" dstnodeid="47" dstpinname="Color">
+   </LINK>
+   <NODE systemname="IOBox (Value Advanced)" nodename="IOBox (Value Advanced)" componentmode="InABox" id="51">
+   <BOUNDS type="Node" left="11520" top="165" width="100" height="100">
+   </BOUNDS>
+   <BOUNDS type="Box" left="11520" top="165" width="480" height="480">
+   </BOUNDS>
+   <PIN pinname="Value Type" slicecount="1" values="Boolean">
+   </PIN>
+   <PIN pinname="Behavior" slicecount="1" values="Toggle">
+   </PIN>
+   <PIN pinname="Descriptive Name" slicecount="1" values="|Display Guide|">
+   </PIN>
+   <PIN pinname="Y Output Value" visible="1">
+   </PIN>
+   </NODE>
+   <LINK srcnodeid="51" srcpinname="Y Output Value" dstnodeid="47" dstpinname="Enabled" linkstyle="VHV">
+   <LINKPOINT x="11550" y="4230">
+   </LINKPOINT>
+   <LINKPOINT x="8415" y="4230">
+   </LINKPOINT>
    </LINK>
    </PATCH>
